@@ -1,0 +1,30 @@
+<?php
+
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+
+/**
+ * Implements hook_entity_view_alter().
+ */
+function replace_wave_file_urls_entity_view_alter(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display)
+{
+    // Iterate through all elements in the render array.
+    array_walk_recursive($build, 'replace_wave_file_urls_alter_file_urls');
+}
+
+/**
+ * Callback function to alter file URLs.
+ */
+function replace_wave_file_urls_alter_file_urls(&$element, $key)
+{
+    if (is_string($element)) {
+        // Define the old and new paths.
+        $old_path = 'sites/www.wavemetrics.com/files';
+        $new_path = 'sites/default/files';
+
+        // Replace old path with the new path.
+        if (strpos($element, $old_path) !== FALSE) {
+            $element = str_replace($old_path, $new_path, $element);
+        }
+    }
+}

@@ -1,0 +1,6 @@
+entity_debug.admin_config_helloworld:
+  title: 'Hello World Utilities'
+  description: 'Utilities for Hello World'
+  parent: system.admin_config
+  route_name: entity_debug.admin_config_helloworld
+  weight: 100

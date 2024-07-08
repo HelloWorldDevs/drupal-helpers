@@ -1,0 +1,7 @@
+name: 'entity_debug'
+type: module
+description: 'Utility to inspect entities'
+package: Hello World
+core_version_requirement: ^10 || ^11
+dependencies:
+  - drupal:system

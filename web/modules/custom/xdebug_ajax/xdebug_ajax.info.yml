@@ -1,0 +1,6 @@
+name: 'Xdebug AJAX'
+type: module
+description: 'Appends XDEBUG_SESSION_START to all AJAX calls for debugging purposes.'
+package: Custom
+core_version_requirement: ^8 || ^9 || ^10
+version: '1.0'

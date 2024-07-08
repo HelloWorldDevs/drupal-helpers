@@ -1,0 +1,6 @@
+xdebug_ajax:
+  js:
+    js/xdebug_ajax.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupalSettings

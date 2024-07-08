@@ -1,0 +1,12 @@
+entity_debug.admin_config_helloworld:
+  path: '/admin/config/helloworld'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Hello World Utilities'
+entity_debug.entity_checker:
+  path: '/admin/config/hw-utilities/entity-checker'
+  defaults:
+    _controller: '\Drupal\entity_debug\Controller\EntityCheckerController::content'
+    _title: 'Entity Checker'
+  requirements:
+    _permission: 'administer site configuration'

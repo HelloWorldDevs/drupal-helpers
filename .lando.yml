@@ -1,0 +1,19 @@
+name: drupal-helpers
+recipe: drupal10
+config:
+  webroot: web
+  database: mariadb:10.5
+  xdebug: true
+  php: 8.1
+services:
+  appserver:
+    type: php:8.1
+    build_as_root:
+      - apt-get update
+      - apt-get install -y git unzip
+  node:
+    type: node:16
+  mailhog:
+    type: mailhog
+tooling:
+

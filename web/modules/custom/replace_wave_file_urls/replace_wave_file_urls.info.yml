@@ -1,0 +1,7 @@
+name: 'Replace File URLs'
+type: module
+description: 'Replaces specific parts of file URLs with desired paths.'
+core_version_requirement: ^10
+package: Custom
+dependencies:
+  - drupal:file
